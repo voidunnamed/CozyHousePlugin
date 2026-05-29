@@ -1,5 +1,6 @@
 # Maven
 target/
+dependency-reduced-pom.xml
 
 # IntelliJ
 .idea/
@@ -7,3 +8,5 @@ target/
 
 # logs
 *.log
+
+
