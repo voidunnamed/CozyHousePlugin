@@ -1,0 +1,12 @@
+name: CozyHouseCore-core
+version: '1.0-SNAPSHOT'
+main: fr.cozyhouse.cozyHouse.CozyHouseCore
+api-version: '1.21'
+author: ItStelax
+description: Quest plugin for CozyHouseCore
+commands:
+  cozyhouse:
+    description: prefix of the CozyHouseCore plugin
+    aliases: [ ch ]
+    permission: admin
+

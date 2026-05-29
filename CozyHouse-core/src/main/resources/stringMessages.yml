@@ -1,0 +1,308 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                       CozyHouseCore MESSAGES FILE                                ║
+# ║                                                                              ║
+# ║   Supported color codes: & followed by a code (e.g., &a, &c, &l, etc.)       ║
+# ║   Available variables depend on each message (see %variable% placeholders)   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  GENERAL
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+general:
+  prefix: "&x&1&5&1&5&1&5[&x&4&4&4&4&4&4C&x&7&3&7&3&7&3o&x&A&1&A&1&A&1z&x&D&0&D&0&D&0y&x&F&F&F&F&F&FH&x&D&C&D&C&D&Co&x&B&9&B&9&B&9u&x&9&5&9&5&9&5s&x&7&2&7&2&7&2e&x&4&F&4&F&4&F] &r"
+  plugin-enabled: "&a&lCozyHouse plugin successfully activated!"
+  plugin-disabled: "&c&lCozyHouse plugin successfully disabled!"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  MANAGERS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+manager:
+  messageManager:
+    loading: "&e&lLoading all messages..."
+    loaded: "&a&lAll messages have been loaded successfully!"
+  playerManager:
+    loading: "&e&lLoading PlayerManager..."
+    loaded: "&a&lPlayerManager loaded successfully."
+  eventsManager:
+    loading: "&e&lLoading EventsManager..."
+    loaded: "&a&lEventsManager loaded successfully."
+  tabAnimator:
+    loading: "&e&lLoading TabAnimator..."
+    loaded: "&a&lTabAnimator loaded successfully."
+  commandsManager:
+    loading: "&e&lLoading CommandsManager..."
+    loaded: "&a&lCommandsManager loaded successfully."
+  raceManager:
+    loading: "&e&lLoading RaceManager..."
+    loaded: "&a&lRaceManager loaded successfully!"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  COMMANDS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+commands:
+
+  # -- CozyHouseCore help -----------------------------------------------------------
+  help:
+    header: "&6&m══════════════════════════════════"
+    title: "&e&lCOZYHOUSE - COMMAND HELP"
+    empty-line: ""
+    footer: "&6&m══════════════════════════════════"
+    lines:
+      - "&e/ch help &8- &fOpen command help"
+      - "&e/ch addmoney [amount] &8- &fAdd money to your bank account"
+      - "&e/ch withdrawmoney [amount] &8- &fWithdraw money from your bank account"
+      - "&e/ch setmoney [amount] &8- &fSet the amount of money in your bank account"
+
+  no-permission: "&c&l&o||| You do not have permission to run this command |||"
+  player-only: "&c&l&o||| This command can only be executed by a player |||"
+  console-only: "&c&l&o||| This command can only be executed from the console |||"
+  unknown-command: "&c&l&o||| Unknown command. Type &e/ch help &c&l&ofor help |||"
+  invalid-arguments: "&c&l&o||| Invalid arguments. Use: &e%usage% |||"
+  display-money: "&2&lYou have &9&l%number% &2&lCozyCoins!"
+
+  # -- RPG commands (/chrpg) ----------------------------------------------------
+  rpg:
+    player-not-found: "&cPlayer not found or offline: &e%player%"
+    invalid-amount: "&cInvalid amount. Please enter a positive integer."
+    unknown-action: "&cUnknown action. Use &egive &cor &eset&c."
+
+    help:
+      header: "&8&m──────────────────────────────────────"
+      title: "&6&l  ✦ CozyHouseRPG — Help &6&l✦"
+      empty-line: ""
+      footer: "&8&m──────────────────────────────────────"
+      lines:
+        - "&e/chrpg info &8- &fDisplay your race and general info"
+        - "&e/chrpg stats [player] &8- &fDisplay complete statistics"
+        - "&e/chrpg changerace &8- &f[Admin] Change your race"
+        - "&e/chrpg exp <give|set> <player> <amount> &8- &f[Admin] Manage XP"
+        - "&e/chrpg level <give|set> <player> <amount> &8- &f[Admin] Manage level"
+        - "&e/chrpg tesseres &8- &fOpen the arcane engraving menu"
+        - "&e/chrpg tesseres info &8- &fDisplay your current engraving status"
+        - "&e/chrpg tesseres reset &8- &f[Admin] Reset engraving"
+
+    exp:
+      usage: "&cUsage: &e/chrpg exp <give|set> <player> <amount>"
+      already-max: "&e%player% &cis already at maximum level."
+      give-success-admin: "&a✔ &e+%amount% XP &agiven to &e%player% &a| XP: &b%xp%"
+      give-success-player: "&a+&e%amount% XP &areceived!"
+      set-success-admin: "&a✔ XP of &e%player% &aset | Level: &a%level% &7| XP: &b%xp%"
+      set-success-player: "&aYour XP has been modified by an admin. Level: &a%level%"
+
+    level:
+      usage: "&cUsage: &e/chrpg level <give|set> <player> <amount>"
+      capped: "&eLevel capped at maximum (&6%max%&e)."
+      give-success-admin: "&a✔ &e+%amount% level(s) &agiven to &e%player% &a| Level: &a%level%"
+      give-success-player: "&aYou gained &e%amount% level(s)&a! Current level: &a%level%"
+      set-success-admin: "&a✔ Level of &e%player% &aset to &a%level%"
+      set-success-player: "&aYour level has been set to &a%level% &aby an admin."
+
+    stats:
+      header: "&8&m──────────────────────────────────────"
+      title: "&6&l  ✦ Stats of %player% &6&l✦"
+      footer: "&8&m──────────────────────────────────────"
+      empty-line: ""
+      race-level-xp: "  &7Race: &f%race%   &7Level: &a%level%   &7XP: &b%xp%"
+      skill-points: "  &7Skill Points: &d%points%"
+      health: "  &cHealth &f%health% &7/ &f%maxhealth%"
+      attributes-header: "&6  ⚔ Attributes"
+      strength: "  &7  Strength     : &f%value%"
+      dexterity: "  &7  Dexterity    : &f%value%"
+      constitution: "  &7  Constitution : &f%value%"
+      intelligence: "  &7  Intelligence : &f%value%"
+      charisma: "  &7  Charisma     : &f%value%"
+      combat-header: "&e  ⚡ Combat"
+      attack-damage: "  &7  Att. Damage  : &f%value%"
+      attack-speed: "  &7  Att. Speed   : &f%value%"
+      armor: "  &7  Armor        : &f%value%"
+      toughness: "  &7  Toughness    : &f%value%"
+      crit-chance: "  &7  Crit. Chance : &f%value%"
+      crit-damage: "  &7  Crit. Damage : &f%value%"
+      dodge: "  &7  Dodge        : &f%value%"
+      kb-resistance: "  &7  KB Resist.   : &f%value%"
+      bonuses-header: "&b  🌊 Bonuses & Resistances"
+      exp-bonus: "  &7  XP Bonus     : &f%value%"
+      loot-bonus: "  &7  Loot Bonus   : &f%value%"
+      trade-discount: "  &7  Trade Disc.  : &f%value%"
+      poison-resist: "  &7  Poison Res.  : &f%value%"
+      fall-reduce: "  &7  Fall Reduc.  : &f%value%"
+      swim-speed: "  &7  Swim Speed   : &f%value%"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  PROGRAM ERRORS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+programErrors:
+  persistant-data-missing: "&c&lThis persistent data does not exist!"
+  game-player-not-initialize: "&c&lYour player profile could not be loaded."
+  race-not-selected: "&c&lYou have not chosen a race yet!"
+  race-manager-not-initialized: "&c&lRaceManager is not initialized!"
+  error-occurred: "&cAn error occurred. Please try again."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  RACES  (shared by CozyHouseCore + CozyHouseRPG)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+race:
+
+  # -- Selection ----------------------------------------------------------------
+  selection:
+    title: "&6&lChoose your Race"
+    selected: "&a&l✓ Race selected: %race%"
+    description: "&7%description%"
+    no-race: "&cYou have not chosen a race yet!"
+    use-command: "&eUse &6/chrpg changerace &eto choose a race."
+    gui:
+      stats-label: "&e&lBase Statistics:"
+      empty-line: ""
+      health: "&7❤ Health: &c%value%"
+      strength: "&7⚔ Strength: &c%value%"
+      dexterity: "&7✦ Dexterity: &a%value%"
+      constitution: "&7❈ Constitution: &e%value%"
+      intelligence: "&7✎ Intelligence: &b%value%"
+      ability-exp-bonus: "&a✓ XP Bonus: +%value%%"
+      ability-loot-bonus: "&a✓ Loot Bonus: +%value%%"
+      ability-water-breathing: "&a✓ Water Breathing"
+      ability-climb-walls: "&a✓ Wall Climbing"
+      ability-no-fall: "&a✓ Fall Immunity"
+      ability-sunlight-weakness: "&c✗ Sunlight Weakness"
+      click-to-choose: "&e&lClick to choose this race!"
+
+  # -- Info ---------------------------------------------------------------------
+  info:
+    header: "&e&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+    your-race: "%color%&lYour Race: %race%"
+    description-label: "&7%description%"
+    empty-line: ""
+    stats-header: "&e&lStatistics:"
+    level-xp: "&7Level: &a%level% &7| XP: &a%xp%"
+    health: "&7Health: &c%health%/%maxhealth%"
+    stats-line: "&7Strength: &c%strength% &7| Dexterity: &a%dexterity%"
+    footer: "&e&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+
+  # -- Individual races ---------------------------------------------------------
+  human:
+    display-name: "&x&4&A&4&D&4&DH&x&6&E&7&1&7&0u&x&9&2&9&4&9&3m&x&6&E&6&F&6&Ea&x&4&A&4&A&4&9n"
+    description: "Versatile and adaptable, humans excel in all domains."
+
+  elf:
+    display-name: "&a&lElf"
+    description: "Agile and precise, elves are masters of the forest."
+
+  dwarf:
+    display-name: "&6&lDwarf"
+    description: "Robust and sturdy, dwarves are exceptional miners."
+
+  orc:
+    display-name: "&c&lOrc"
+    description: "Brutal and strong, orcs dominate by force."
+
+  goblin:
+    display-name: "&e&lGoblin"
+    description: "Cunning and fast, goblins excel in stealth."
+
+  fairy:
+    display-name: "&d&lFairy"
+    description: "Magical and light, fairies master the mystical arts."
+
+  beast:
+    display-name: "&8&lBeast"
+    description: "Wild and instinctive, beasts are fearsome predators."
+
+  fish:
+    display-name: "&b&lFish"
+    description: "Adapted to aquatic life, fish dominate the oceans."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  BIOMES  (CozyHouseRPG)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+biome:
+  changed: "&7Biome: &a%biome%"
+  entering: "&7Entering biome: &a%biome%"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  TESSERES  (CozyHouseRPG) — Arcane Engraving System
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+tessere:
+
+  # -- Loadout (revelation and engraving messages) ------------------------------
+  loadout:
+    engraving-unchanged: "&7The engraving has not changed."
+    equipped: "&7%nom% &8→ &7%slot% %eff%"
+    revelation-separator: "&5&m══════════════════════════════"
+    revelation-title: "&5&l✦ Arcane Revelation!"
+    revelation-line: "&d%index%. &f%nom% &7— %description%"
+    score-perfect: "&6⬡ Efficiency: &6&lPerfect"
+    score-high: "&a⬡ Efficiency: &aHigh"
+    score-average: "&e⬡ Efficiency: &eAverage"
+    score-low: "&c⬡ Efficiency: &cLow"
+    score-chaotic: "&4⬡ Efficiency: &4Chaotic"
+
+  # -- GUI (item labels inside inventories) -------------------------------------
+  gui:
+    empty-slot-name: "&7[ %slot% ]"
+    empty-slot-node: "&8%node%"
+    slot-click-choose: "&8Left click &7→ Choose"
+    slot-click-remove: "&8Right click &7→ Remove"
+    slot-efficiency: "&7Slot efficiency: %value%"
+    slot-affinity: "&7%race% affinity: %value%"
+    validate-incomplete-name: "&c&l✗ Engraving incomplete"
+    validate-incomplete-lore: "&7%count%/6 slots filled"
+    validate-ready-name: "&a&l✦ Validate Engraving"
+    validate-ready-lore: "&7Click to reveal your 3 abilities."
+    validate-active-name: "&6&l✦ Active Engraving"
+    validate-active-score: "&7Score: &f%value%"
+    validate-active-ability: "&d▸ %nom%"
+    catalog-efficiency: "&7Efficiency here: %value%"
+    catalog-affinity: "&7%race% affinity: %value%"
+    eff-excellent: "&a✦ Excellent (%value%)"
+    eff-good: "&e◆ Good (%value%)"
+    eff-weak: "&c▼ Weak (%value%)"
+    locked-name: "&8✗ Unknown Tessere"
+    locked-lore: "&7Not yet discovered."
+
+  # -- Combat (effects triggered during combat) ---------------------------------
+  combat:
+    chaos-surge: "&4⬡ Chaos Latent: &4&lSurge!"
+    chaos-dissipation: "&4⬡ Chaos Latent: &8Dissipation."
+
+  # -- Skill mode ---------------------------------------------------------------
+  skill-mode:
+    enter: "&5&l✦ Skill Mode — &dScroll to select, click to activate. &8Right-click wand to cancel."
+    exit: "&8✦ Skill mode deactivated."
+    no-skills: "&cNo skills revealed yet. Validate your engraving first."
+    activated: "&5⬡ &f%skill% &5activated!"
+    selected: "&7Selected: &d%skill% &8— &7%description%"
+    passive-only: "&7%skill% &8is passive — always active."
+    on-cooldown: "&c%skill% on cooldown."
+
+  # -- Commands (/chrpg tesseres) -----------------------------------------------
+  commands:
+    discover-success: "&a✦ Tessere discovered: &f%tessere%"
+    discover-all-success: "&a✦ All Tesseres discovered!"
+    reset-success: "&a✦ Engraving reset."
+    info-separator: "&5&m══════════════════════"
+    info-title: "&5&l✦ Your Engraving Status"
+    info-slot-line: "&7%slot%: %tessere%"
+    info-slot-empty: "&8empty"
+    info-not-revealed: "&8Engraving not yet revealed."
+    info-score: "&7Score: &f%value%"
+    info-ability: "&d▸ %nom% &7— %description%"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  RPG — Experience (CozyHouseRPG)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+rpg:
+  experience:
+    level-max-display: "&6✦ MAX"
+    xp-max-display: "&6MAX"
+    level-up: "&a&l↑ Level Up! &7Level &a%level% &7| Next level: &b%required% XP"
+    max-level-reached: "&6&l✦ MAXIMUM LEVEL REACHED! &6&lYou are at the peak of your power!"
+    action-bar: "&6Lvl %level% &7| %bar% %xp% &7EXP"

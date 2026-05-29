@@ -1,0 +1,22 @@
+name: CozyHouseRPG
+version: '1.0-SNAPSHOT'
+main: fr.cozyhouse.cozyHouseRPG.CozyHouseRPG
+api-version: '1.21'
+depend: [CozyHouseCore-core]
+
+commands:
+  cozyhouserpg:
+    description: Commandes principales du plugin CozyHouseRPG
+    aliases: [chRPG, chrpg]
+    usage: /chrpg <info|stats|changerace|exp|level>
+
+permissions:
+  cozyhouserpg.user:
+    description: "Permet de voir ses propres stats et les infos de sa race (/chrpg info, /chrpg stats)"
+    default: true
+
+  cozyhouserpg.admin:
+    description: "Accès complet aux commandes admin (changerace, stats <joueur>, exp, level)"
+    default: op
+    children:
+      cozyhouserpg.user: true
