@@ -189,13 +189,13 @@ public class QuestLoader {
             Map<?, ?> map = rawList.get(i);
             try {
                 String typeStr = (String) map.get("type");
-                RewardType type = RewardType.valueOf(typeStr.toUpperCase());
+                RewardType reward = RewardType.valueOf(typeStr.toUpperCase());
 
                 String material = map.containsKey("material") ? (String) map.get("material") : null;
                 int amount      = map.containsKey("amount") ? (int) map.get("amount") : 1;
                 String command  = map.containsKey("command") ? (String) map.get("command") : null;
 
-                list.add(new QuestReward(type, material, amount, command));
+                list.add(new QuestReward(reward, material, amount, command));
             } catch (Exception e) {
                 log.warning("[QuestLoader] Récompense " + i + " invalide dans stage '"
                         + stageId + "' (" + fileName + ") : " + e.getMessage());

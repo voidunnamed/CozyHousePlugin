@@ -1,7 +1,12 @@
 package fr.cozyhouse.cozyHouseQuests.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
+@AllArgsConstructor
 public class QuestStage {
 
     private String id;
@@ -11,6 +16,4 @@ public class QuestStage {
     private String nextStage;
     private List<QuestReward> rewards;
 
-    public QuestStage(String stageId, String dialogue, List<QuestObjective> objectives, List<QuestChoice> choices, String nextStage, List<QuestReward> rewards) {
-    }
 }

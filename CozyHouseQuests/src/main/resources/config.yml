@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────
+# CozyHouseQuests — config.yml
+# ─────────────────────────────────────────────
+
+debug: false
+
+ui:
+  action_bar: true
+  boss_bar: true
+
+storage:
+  auto_save_interval: 300
+
+messages:
+  prefix: "&8[&6Quêtes&8] &r"
+  quest_started:     "&aQuête démarrée : &e%quest_name%"
+  quest_completed:   "&6✦ Quête terminée : &e%quest_name%"
+  objective_updated: "&7Progression : &f%current%&7/&f%max% &7%label%"
+  no_quests:         "&7Vous n'avez aucune quête active."
+  already_active:    "&cVous avez déjà cette quête en cours."
+  already_completed: "&cVous avez déjà terminé cette quête."
+  quest_not_found:   "&cQuête introuvable : &f%id%"
